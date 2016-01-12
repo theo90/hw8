@@ -21,8 +21,8 @@ int main()
 	//init conditions
 	ofstream out("symp_euler1.txt");
 	init (p, q,  H,  e);
-	//out<<t<<"\t "<< q[0]<<"\t "<< q[1]<<"\t "<< p[0]<<"\t "<< p[1]<<"\t "<< H<<endl;
-	out<<q[0]<<"\t "<<q[1]<<endl;
+	out<<t<<"\t "<< q[0]<<"\t "<< q[1]<<"\t "<< p[0]<<"\t "<< p[1]<<"\t "<< H<<endl;
+	//out<<q[0]<<"\t "<<q[1]<<endl;
 
 	//next step
 
@@ -31,8 +31,8 @@ int main()
 		
 		step(p, q, dt,  dim,   H);
 		t+=dt;
-		//out<<t<<"\t"<<q[0]<<"\t"<<q[1]<<"\t"<<p[0]<<"\t"<<p[1]<<"\t"<<H<<endl;
-		out<<q[0]<<"\t   "<<   q[1]<<endl;
+		out<<t<<"\t"<<q[0]<<"\t"<<q[1]<<"\t"<<p[0]<<"\t"<<p[1]<<"\t"<<H<<endl;
+		//out<<q[0]<<"\t   "<<   q[1]<<endl;
 	}
 	out.close();
   
